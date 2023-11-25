@@ -7,8 +7,8 @@ export default function Home() {
   return (
     <>
       <MainSection />
-      <Pricing/>
       <Features/> 
+      <Pricing/>
     </>
   );
 }

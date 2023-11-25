@@ -71,12 +71,6 @@ export default function LargeWithAppLinksAndSocial() {
               About Us
             </Box>
             <Box as="a" href={'#'}>
-              Blog
-            </Box>
-            <Box as="a" href={'#'}>
-              Careers
-            </Box>
-            <Box as="a" href={'#'}>
               Contact Us
             </Box>
           </Stack>
@@ -86,27 +80,15 @@ export default function LargeWithAppLinksAndSocial() {
             <Box as="a" href={'#'}>
               Help Center
             </Box>
-            <Box as="a" href={'#'}>
-              Safety Center
-            </Box>
-            <Box as="a" href={'#'}>
-              Community Guidelines
-            </Box>
           </Stack>
 
           <Stack align={'flex-start'}>
             <ListHeader>Legal</ListHeader>
             <Box as="a" href={'#'}>
-              Cookies Policy
-            </Box>
-            <Box as="a" href={'#'}>
               Privacy Policy
             </Box>
             <Box as="a" href={'#'}>
               Terms of Service
-            </Box>
-            <Box as="a" href={'#'}>
-              Law Enforcement
             </Box>
           </Stack>
 

@@ -69,32 +69,31 @@ export default function Features() {
           What Makes Us Unique
         </Heading>
         <Text color={'gray.600'} fontSize={{ base: 'sm', sm: 'lg' }}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis obcaecati ut
-          cupiditate pariatur, dignissimos, placeat amet officiis.
+        Bizzscribe gives tailored excellence for every business type. Whether you run a boutique, restaurant, consultancy, or enterprise, our feature-rich platform is meticulously designed to elevate and optimize your online sales experience, ensuring tailored success for your unique business needs.
         </Text>
       </Stack>
 
       <Container maxW={'5xl'} mt={12}>
         <Flex flexWrap="wrap" gridGap={6} justify="center">
           <Card
-            heading={'Heading'}
+            heading={'Sign Up'}
             icon={<Icon as={FcAssistant} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            description={'Effortlessly create your Bizzscribe account in moments.'}
             href={'#'}
           />
           <Card
-            heading={'Heading'}
+            heading={'Customize'}
             icon={<Icon as={FcCollaboration} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            description={'Personalize your online store with our intuitive design tools, ensuring it aligns seamlessly with your brand.'}
             href={'#'}
           />
           <Card
-            heading={'Heading'}
+            heading={'Start Selling'}
             icon={<Icon as={FcDonate} w={10} h={10} />}
-            description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
+            description={'Upload your products or services, set prices, and watch your online sales soar.'}
             href={'#'}
           />
-          <Card
+          {/* <Card
             heading={'Heading'}
             icon={<Icon as={FcManager} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
@@ -105,7 +104,7 @@ export default function Features() {
             icon={<Icon as={FcAbout} w={10} h={10} />}
             description={'Lorem ipsum dolor sit amet catetur, adipisicing elit.'}
             href={'#'}
-          />
+          /> */}
         </Flex>
       </Container>
     </Box>

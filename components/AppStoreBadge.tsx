@@ -7,7 +7,7 @@ import { Button, Center, Text } from '@chakra-ui/react'
 
 export default function AppStoreBadge() {
   return (
-      <Button w={'full'} maxW={'md'} colorScheme={'facebook'} leftIcon={<IoLogoAppleAppstore />}>
+      <Button w={'full'} maxW={'md'} colorScheme={'gray'} leftIcon={<IoLogoAppleAppstore />}>
         <Center>
           <Text>Download on App Store</Text>
         </Center>

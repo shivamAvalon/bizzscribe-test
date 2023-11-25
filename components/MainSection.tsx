@@ -221,7 +221,7 @@ export default function CallToActionWithVideo() {
                   aria-label={"Play Button"}
                   variant={"ghost"}
                   _hover={{ bg: "transparent" }}
-                  icon={<PlayIcon w={12} h={12} />}
+                  icon={<PlayIcon color={'gray'} w={12} h={12} />}
                   size={"lg"}
                   color={"white"}
                   style={{

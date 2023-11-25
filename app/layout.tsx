@@ -44,6 +44,7 @@ const fonts = {
 // 3. extend the theme
 const theme = extendTheme({ config, fonts, colors });
 
+
 export default function RootLayout({
   children,
 }: {
@@ -55,7 +56,7 @@ export default function RootLayout({
         <CacheProvider>
           <ChakraProvider theme={theme}>
             <Container
-              minW={{ base: "100%", md: "80%" }}
+              minW={{ base: "100%", md: "100%" }}
               p={{ base: "10px", md: "20px 200px 100px 200px" }}
             >
               <NavBar />

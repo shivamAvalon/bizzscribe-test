@@ -101,8 +101,6 @@ export default function CallToActionWithVideo() {
   const handlePlayPause = () => {
     const video = videoRef.current;
 
-    console.log(video, "video");
-
     if (video) {
       if (isPlaying) {
         video.pause();
@@ -122,7 +120,7 @@ export default function CallToActionWithVideo() {
         py={{ base: 20, md: 28 }}
         direction={{ base: "column", md: "row" }}
       >
-        <Stack flex={1} spacing={{ base: 5, md: 10 }}>
+        <Stack flex={1} spacing={{ base: 5, md: 10 }} textAlign={{ base: 'center', md: 'left' }}>
           <Heading
             lineHeight={1.1}
             fontWeight={600}
@@ -146,11 +144,11 @@ export default function CallToActionWithVideo() {
             </Text>
             <br />
             <Text as={"span"} color={"red.400"}>
-              meet simplicity!
+              meet simplicity!
             </Text>
           </Heading>
           <Text color={useColorModeValue("gray.600", "gray.200")}>
-            Tailored to meet the diverse needs of businesses. Manage <br></br>{" "}
+            Tailored to meet the diverse needs of businesses. Manage <br />
             <Text as={"b"} color={useColorModeValue("gray.700", "gray.200")}>
               products, services, orders, customers, offers, payment, delivery
               and more.
@@ -188,6 +186,7 @@ export default function CallToActionWithVideo() {
           align={"center"}
           position={"relative"}
           w={"full"}
+          mt={{ base: 10, md: 0 }}
         >
           <Blob
             w={"150%"}
@@ -200,7 +199,7 @@ export default function CallToActionWithVideo() {
           />
           <Box
             position={"relative"}
-            height={"300px"}
+            height={{ base: "200px", md: "300px" }}
             rounded={"2xl"}
             boxShadow={"2xl"}
             width={"full"}
@@ -253,6 +252,8 @@ export default function CallToActionWithVideo() {
     </Container>
   );
 }
+
+
 
 const PlayIcon = createIcon({
   displayName: "PlayIcon",

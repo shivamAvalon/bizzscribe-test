@@ -51,13 +51,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body style={{ margin: 0, padding: 0 }}>
         <CacheProvider>
           <ChakraProvider theme={theme}>
             <Container
-              minW={"100%"}
-              minH={"100%"}
-              p={"20px 200px 100px 200px"}
+              minW={{ base: "100%", md: "80%" }}
+              p={{ base: "10px", md: "20px 200px 100px 200px" }}
             >
               <NavBar />
               {children}

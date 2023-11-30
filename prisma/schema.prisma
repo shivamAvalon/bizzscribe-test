@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model profile {
+  id            String     @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  username      String?
+  email         String     @unique
+  profile_photo String?
+  // Add other user details as needed
+  businesses    business[]
+  createdAt     DateTime   @default(now()) @db.Timestamptz(3)
+}
+
+model business {
+  id          String  @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name        String
+  description String?
+  logo        String?
+  // Add other business details as needed
+  profile     profile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+  profileId   String  @db.Uuid
+  stores      store[]
+}
+
+model store {
+  id          String    @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name        String
+  description String?
+  location    String?
+  logo        String?
+  // Add other store details as needed
+  business    business  @relation(fields: [businessId], references: [id], onDelete: Cascade)
+  businessId  String    @db.Uuid
+  products    product[]
+}
+
+model product {
+  id      String  @id @default(dbgenerated("uuid_generate_v4()")) @db.Uuid
+  name    String
+  price   Float
+  image   String?
+  // Add other product details as needed
+  store   store   @relation(fields: [storeId], references: [id], onDelete: Cascade)
+  storeId String  @db.Uuid
+}

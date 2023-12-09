@@ -15,6 +15,9 @@ export default function NavBar() {
   const btnBg = useColorModeValue("gray.700", "gray.100");
   const btnTxt = useColorModeValue("gray.100", "gray.700");
 
+  const onHoverbtnBg = useColorModeValue("gray.900", "gray.200");
+
+
   return (
     <>
       <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -32,16 +35,17 @@ export default function NavBar() {
         <Flex alignItems={"center"}>
           <Stack direction={"row"} spacing={7}>
             <Link href={"/registration"}>
-              <Button bg={btnBg} color={btnTxt}>
+              <Button bg={btnBg} color={btnTxt} _hover={{ bg: onHoverbtnBg }}>
                 Get Started
               </Button>
             </Link>
             <Link href={"/login"}>
-              <Button bg={btnBg} color={btnTxt}>
+              <Button bg={btnBg} color={btnTxt}
+              _hover={{ bg: onHoverbtnBg }}>
                 Login
               </Button>
             </Link>
-            <Button bg={btnBg} color={btnTxt} onClick={toggleColorMode}>
+            <Button bg={btnBg} color={btnTxt}  _hover={{ bg: onHoverbtnBg }} onClick={toggleColorMode}>
               {colorMode === "light" ? <MoonIcon /> : <SunIcon />}
             </Button>
           </Stack>
